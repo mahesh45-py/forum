@@ -1,0 +1,26 @@
+<h1>Users page</h1>
+<div class="overflow-x-auto">
+  <table class="table-auto border-collapse w-3/4 mx-auto">
+    <thead>
+      <tr>
+        <th class="border px-4 py-2 text-center bg-gray-300">ID</th>
+        <th class="border px-4 py-2 text-center bg-gray-300">Name</th>
+        <th class="border px-4 py-2 text-center bg-gray-300">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+     <%= for user <- @userData do %>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2 text-center">
+        <%= user.id %>
+        </td>
+        <td class="border px-4 py-2 text-center"> <%= user.name %> </td>
+        <td class="border px-4 py-2 text-center"> <%= user.email %> </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+
